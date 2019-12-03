@@ -44,8 +44,11 @@
     <Compile Include="BlockEntryModel.cs" />
     <Compile Include="BlockStatusModel.cs" />
     <Compile Include="EngineerModel.cs" />
+    <Compile Include="IDataConnection.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="BlockEntryConfig.cs" />
     <Compile Include="SeverityModel.cs" />
+    <Compile Include="SQLConnection.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

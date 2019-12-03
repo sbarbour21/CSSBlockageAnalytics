@@ -42,7 +42,7 @@
             this.BlockageLoginFormLabel.ForeColor = System.Drawing.Color.Black;
             this.BlockageLoginFormLabel.Location = new System.Drawing.Point(109, 9);
             this.BlockageLoginFormLabel.Name = "BlockageLoginFormLabel";
-            this.BlockageLoginFormLabel.Size = new System.Drawing.Size(244, 37);
+            this.BlockageLoginFormLabel.Size = new System.Drawing.Size(490, 72);
             this.BlockageLoginFormLabel.TabIndex = 1;
             this.BlockageLoginFormLabel.Text = "CSS Blockage Form";
             // 
@@ -53,16 +53,16 @@
             this.EngineerUsernameLabel.ForeColor = System.Drawing.Color.Black;
             this.EngineerUsernameLabel.Location = new System.Drawing.Point(32, 139);
             this.EngineerUsernameLabel.Name = "EngineerUsernameLabel";
-            this.EngineerUsernameLabel.Size = new System.Drawing.Size(156, 30);
+            this.EngineerUsernameLabel.Size = new System.Drawing.Size(309, 57);
             this.EngineerUsernameLabel.TabIndex = 3;
             this.EngineerUsernameLabel.Text = "Microsoft Alias:";
             // 
             // userName
             // 
             this.userName.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.userName.Location = new System.Drawing.Point(194, 139);
+            this.userName.Location = new System.Drawing.Point(363, 133);
             this.userName.Name = "userName";
-            this.userName.Size = new System.Drawing.Size(236, 35);
+            this.userName.Size = new System.Drawing.Size(426, 63);
             this.userName.TabIndex = 4;
             // 
             // PasswordLabel
@@ -71,33 +71,33 @@
             this.PasswordLabel.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PasswordLabel.Location = new System.Drawing.Point(84, 216);
             this.PasswordLabel.Name = "PasswordLabel";
-            this.PasswordLabel.Size = new System.Drawing.Size(104, 30);
+            this.PasswordLabel.Size = new System.Drawing.Size(209, 57);
             this.PasswordLabel.TabIndex = 5;
             this.PasswordLabel.Text = "Password:";
             // 
             // PasswordTextBox
             // 
             this.PasswordTextBox.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PasswordTextBox.Location = new System.Drawing.Point(194, 211);
+            this.PasswordTextBox.Location = new System.Drawing.Point(363, 213);
             this.PasswordTextBox.Name = "PasswordTextBox";
-            this.PasswordTextBox.Size = new System.Drawing.Size(236, 35);
+            this.PasswordTextBox.Size = new System.Drawing.Size(426, 63);
             this.PasswordTextBox.TabIndex = 6;
             // 
             // LoginButton
             // 
             this.LoginButton.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LoginButton.Location = new System.Drawing.Point(341, 297);
+            this.LoginButton.Location = new System.Drawing.Point(302, 369);
             this.LoginButton.Name = "LoginButton";
-            this.LoginButton.Size = new System.Drawing.Size(89, 40);
+            this.LoginButton.Size = new System.Drawing.Size(297, 84);
             this.LoginButton.TabIndex = 7;
             this.LoginButton.Text = "Login";
             this.LoginButton.UseVisualStyleBackColor = true;
             // 
             // CSSBlockageLogin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(15F, 37F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(30F, 72F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(470, 416);
+            this.ClientSize = new System.Drawing.Size(918, 520);
             this.Controls.Add(this.LoginButton);
             this.Controls.Add(this.PasswordTextBox);
             this.Controls.Add(this.PasswordLabel);

@@ -10,7 +10,7 @@ namespace CSSBlockageLibrary
     {
         public DateTime Time { get; set; }
         public string ServiceRequest { get; set; }
-        public List<SeverityModel> Severity { get; set; } = new List<SeverityModel>();
-        public List<BlockStatusModel> Status { get; set; } = new List<BlockStatusModel>();
+        public List<SeverityModel> Severity { get; set; }
+        public List<BlockStatusModel> Status { get; set; }
     }
 }
