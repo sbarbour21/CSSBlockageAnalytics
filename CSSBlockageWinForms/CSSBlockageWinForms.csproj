@@ -88,5 +88,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CSSBlockageLibrary\CSSBlockageLibrary.csproj">
+      <Project>{6d347e30-3b6d-4383-8c1e-e06a146962bf}</Project>
+      <Name>CSSBlockageLibrary</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

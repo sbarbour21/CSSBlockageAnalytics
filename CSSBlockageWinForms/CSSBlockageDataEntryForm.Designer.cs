@@ -34,7 +34,7 @@
             this.BlockTypeLabel = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.StatusComboBox = new System.Windows.Forms.ComboBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.ServiceRequestValue = new System.Windows.Forms.TextBox();
             this.BlockageTypeComboBox = new System.Windows.Forms.ComboBox();
             this.BlockageSubTypeComboBox = new System.Windows.Forms.ComboBox();
             this.CommentLabel = new System.Windows.Forms.Label();
@@ -43,6 +43,7 @@
             this.PreviousBlockageList = new System.Windows.Forms.Label();
             this.ResetButton = new System.Windows.Forms.Button();
             this.SubmitButton = new System.Windows.Forms.Button();
+            this.IsItACritSit = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // CSSBlockageEntryFormLabel
@@ -114,14 +115,14 @@
             this.StatusComboBox.Text = "Please Select One";
             this.StatusComboBox.SelectedIndexChanged += new System.EventHandler(this.StatusComboBox_SelectedIndexChanged);
             // 
-            // textBox1
+            // ServiceRequestValue
             // 
-            this.textBox1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(382, 90);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(474, 58);
-            this.textBox1.TabIndex = 6;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.ServiceRequestValue.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ServiceRequestValue.Location = new System.Drawing.Point(382, 90);
+            this.ServiceRequestValue.Name = "ServiceRequestValue";
+            this.ServiceRequestValue.Size = new System.Drawing.Size(474, 58);
+            this.ServiceRequestValue.TabIndex = 6;
+            this.ServiceRequestValue.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // BlockageTypeComboBox
             // 
@@ -160,7 +161,7 @@
             this.CommentBox.Location = new System.Drawing.Point(19, 430);
             this.CommentBox.Multiline = true;
             this.CommentBox.Name = "CommentBox";
-            this.CommentBox.Size = new System.Drawing.Size(590, 164);
+            this.CommentBox.Size = new System.Drawing.Size(488, 164);
             this.CommentBox.TabIndex = 10;
             // 
             // listView1
@@ -168,7 +169,7 @@
             this.listView1.HideSelection = false;
             this.listView1.Location = new System.Drawing.Point(19, 678);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(590, 272);
+            this.listView1.Size = new System.Drawing.Size(837, 272);
             this.listView1.TabIndex = 11;
             this.listView1.UseCompatibleStateImageBehavior = false;
             // 
@@ -203,12 +204,27 @@
             this.SubmitButton.TabIndex = 14;
             this.SubmitButton.Text = "Submit";
             this.SubmitButton.UseVisualStyleBackColor = true;
+            this.SubmitButton.Click += new System.EventHandler(this.SubmitButton_Click);
+            // 
+            // IsItACritSit
+            // 
+            this.IsItACritSit.AutoSize = true;
+            this.IsItACritSit.Font = new System.Drawing.Font("Segoe UI", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.IsItACritSit.ForeColor = System.Drawing.Color.Black;
+            this.IsItACritSit.Location = new System.Drawing.Point(575, 430);
+            this.IsItACritSit.Name = "IsItACritSit";
+            this.IsItACritSit.Size = new System.Drawing.Size(272, 54);
+            this.IsItACritSit.TabIndex = 15;
+            this.IsItACritSit.Text = "Is it a CRISIT?";
+            this.IsItACritSit.UseVisualStyleBackColor = true;
+            this.IsItACritSit.CheckedChanged += new System.EventHandler(this.IsItACritSit_CheckedChanged);
             // 
             // CSSBlockageDataEntryForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(30F, 72F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(923, 1171);
+            this.Controls.Add(this.IsItACritSit);
             this.Controls.Add(this.SubmitButton);
             this.Controls.Add(this.ResetButton);
             this.Controls.Add(this.PreviousBlockageList);
@@ -217,7 +233,7 @@
             this.Controls.Add(this.CommentLabel);
             this.Controls.Add(this.BlockageSubTypeComboBox);
             this.Controls.Add(this.BlockageTypeComboBox);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.ServiceRequestValue);
             this.Controls.Add(this.StatusComboBox);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.BlockTypeLabel);
@@ -243,7 +259,7 @@
         private System.Windows.Forms.Label BlockTypeLabel;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox StatusComboBox;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox ServiceRequestValue;
         private System.Windows.Forms.ComboBox BlockageTypeComboBox;
         private System.Windows.Forms.ComboBox BlockageSubTypeComboBox;
         private System.Windows.Forms.Label CommentLabel;
@@ -252,6 +268,7 @@
         private System.Windows.Forms.Label PreviousBlockageList;
         private System.Windows.Forms.Button ResetButton;
         private System.Windows.Forms.Button SubmitButton;
+        private System.Windows.Forms.CheckBox IsItACritSit;
     }
 }
 

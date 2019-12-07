@@ -61,5 +61,34 @@ namespace CSSBlockageWinForms
         {
 
         }
+
+        private void SubmitButton_Click(object sender, EventArgs e)
+        {
+            
+
+        }
+
+
+        private bool Validate()
+        {
+            bool output = true;
+            var servicerequest = ServiceRequestValue;
+
+            if (ServiceRequestValue.TextLength <= 0)
+            {
+                output = false;
+            }
+
+
+
+
+
+            return output;
+        }
+
+        private void IsItACritSit_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

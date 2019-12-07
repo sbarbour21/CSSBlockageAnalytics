@@ -16,10 +16,10 @@ namespace CSSBlockageWinForms
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-
+            CSSBlockageLibrary.BlockEntryConfig.InitializeConnection(true);
             //Initialize the DB connection
 
-            Application.Run(new CSSBlockageLogin());
+            Application.Run(new CSSBlockageDataEntryForm());
         }
     }
 }

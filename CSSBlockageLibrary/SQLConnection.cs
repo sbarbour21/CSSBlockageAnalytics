@@ -10,7 +10,9 @@ namespace CSSBlockageLibrary
     {
         public BlockEntryModel SaveEntry(BlockEntryModel model)
         {
-            throw new NotImplementedException();
+            model.Id = 1;
+
+            return model;
         }
     }
 }
