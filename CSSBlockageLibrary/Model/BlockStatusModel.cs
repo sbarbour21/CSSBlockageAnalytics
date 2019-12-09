@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Data;
 
-namespace CSSBlockageLibrary
+namespace CSSBlockageLibrary.Model
 {
     public class BlockStatusModel
     {

@@ -4,16 +4,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CSSBlockageLibrary
+namespace CSSBlockageLibrary.Model
 {
     public class BlockEntryModel
     {
-        private int Id { get; set; }
+        public int Id { get; set; }
         public int EngineerId { get; set; }
         public DateTime Time { get; set; }
         public string ServiceRequest { get; set; }
-        public SeverityModel Severity { get; set; } 
-        public BlockStatusModel Status { get; set; }  
+        public SeverityModel Severity { get; set; } = new SeverityModel();
+        public BlockStatusModel Status { get; set; } = new BlockStatusModel();
 
         public BlockEntryModel()
         {

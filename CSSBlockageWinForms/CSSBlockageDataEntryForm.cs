@@ -1,4 +1,7 @@
-﻿using System;
+﻿using CSSBlockageLibrary;
+using CSSBlockageLibrary.DataAccess;
+using CSSBlockageLibrary.Model;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -42,7 +45,7 @@ namespace CSSBlockageWinForms
 
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
+        private void ServiceRequestValue_TextChanged(object sender, EventArgs e)
         {
 
         }
@@ -64,24 +67,41 @@ namespace CSSBlockageWinForms
 
         private void SubmitButton_Click(object sender, EventArgs e)
         {
-            
+            if (Validate())
+            {
+                BlockEntryModel model = new BlockEntryModel(ServiceRequestValue.Text, IsItACritSit.Checked, StatusComboBox.Text, BlockageTypeComboBox.Text, BlockageSubTypeComboBox.Text);
 
+                foreach (IDataConnection db in BlockEntryConfig.Connections)
+                {
+                    db.SaveEntry(model);
+                }
+            }
         }
 
 
         private bool Validate()
         {
-            bool output = true;
+            bool output = false;
             var servicerequest = ServiceRequestValue;
 
             if (ServiceRequestValue.TextLength <= 0)
             {
-                output = false;
+                output = true;
             }
 
+            
+            if (StatusComboBox.Text.Length > 0)
+            {
 
+            }
+            if (BlockageSubTypeComboBox.Text.Length > 0)
+            {
 
+            }
+            if (BlockageSubTypeComboBox.Text.Length > 0)
+            {
 
+            }
 
             return output;
         }

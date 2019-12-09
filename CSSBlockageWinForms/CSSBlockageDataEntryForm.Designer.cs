@@ -73,7 +73,7 @@
             this.StatusLabel.AutoSize = true;
             this.StatusLabel.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.StatusLabel.ForeColor = System.Drawing.Color.Black;
-            this.StatusLabel.Location = new System.Drawing.Point(187, 157);
+            this.StatusLabel.Location = new System.Drawing.Point(134, 157);
             this.StatusLabel.Name = "StatusLabel";
             this.StatusLabel.Size = new System.Drawing.Size(185, 51);
             this.StatusLabel.TabIndex = 2;
@@ -122,7 +122,7 @@
             this.ServiceRequestValue.Name = "ServiceRequestValue";
             this.ServiceRequestValue.Size = new System.Drawing.Size(474, 58);
             this.ServiceRequestValue.TabIndex = 6;
-            this.ServiceRequestValue.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.ServiceRequestValue.TextChanged += new System.EventHandler(this.ServiceRequestValue_TextChanged);
             // 
             // BlockageTypeComboBox
             // 
@@ -169,7 +169,7 @@
             this.listView1.HideSelection = false;
             this.listView1.Location = new System.Drawing.Point(19, 678);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(837, 272);
+            this.listView1.Size = new System.Drawing.Size(488, 115);
             this.listView1.TabIndex = 11;
             this.listView1.UseCompatibleStateImageBehavior = false;
             // 
@@ -187,9 +187,9 @@
             // 
             this.ResetButton.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ResetButton.ForeColor = System.Drawing.Color.Black;
-            this.ResetButton.Location = new System.Drawing.Point(125, 1029);
+            this.ResetButton.Location = new System.Drawing.Point(529, 705);
             this.ResetButton.Name = "ResetButton";
-            this.ResetButton.Size = new System.Drawing.Size(196, 107);
+            this.ResetButton.Size = new System.Drawing.Size(134, 88);
             this.ResetButton.TabIndex = 13;
             this.ResetButton.Text = "Reset";
             this.ResetButton.UseVisualStyleBackColor = true;
@@ -198,9 +198,9 @@
             // 
             this.SubmitButton.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SubmitButton.ForeColor = System.Drawing.Color.Black;
-            this.SubmitButton.Location = new System.Drawing.Point(382, 1029);
+            this.SubmitButton.Location = new System.Drawing.Point(734, 705);
             this.SubmitButton.Name = "SubmitButton";
-            this.SubmitButton.Size = new System.Drawing.Size(227, 107);
+            this.SubmitButton.Size = new System.Drawing.Size(181, 88);
             this.SubmitButton.TabIndex = 14;
             this.SubmitButton.Text = "Submit";
             this.SubmitButton.UseVisualStyleBackColor = true;
@@ -221,9 +221,10 @@
             // 
             // CSSBlockageDataEntryForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(30F, 72F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(923, 1171);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(192F, 192F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.AutoSize = true;
+            this.ClientSize = new System.Drawing.Size(927, 882);
             this.Controls.Add(this.IsItACritSit);
             this.Controls.Add(this.SubmitButton);
             this.Controls.Add(this.ResetButton);
@@ -243,6 +244,7 @@
             this.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.White;
             this.Margin = new System.Windows.Forms.Padding(8, 9, 8, 9);
+            this.MaximizeBox = false;
             this.Name = "CSSBlockageDataEntryForm";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.CSSBlockageDataEntryForm_Load);
