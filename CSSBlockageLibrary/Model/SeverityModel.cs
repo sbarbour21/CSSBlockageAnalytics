@@ -26,6 +26,7 @@ namespace CSSBlockageLibrary.Model
         //Constructor for User entry
         public SeverityModel(bool isItCrisit, string severityLetterSelection)
         {
+            SeverityLetterArray = new string[] { "A", "B", "B 24/7", "C" };
             isItCrisit = IsitCriSit;
             severityLetterSelection = SeverityLetterSelection;
 

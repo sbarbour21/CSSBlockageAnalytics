@@ -52,17 +52,18 @@ namespace CSSBlockageWinForms
 
         private void StatusComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            
         }
 
         private void BlockageTypeComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            BlockageSubTypeComboBox.Items.Clear();
+            BlockageSubTypeComboBox.Items.AddRange(BlockEntryConfig.SubBlockTypeSelection(BlockageTypeComboBox.Text));
         }
 
         private void BlockageSubTypeComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            
         }
 
         private void SubmitButton_Click(object sender, EventArgs e)
@@ -76,6 +77,15 @@ namespace CSSBlockageWinForms
                     db.SaveEntry(model);
                 }
             }
+
+            //Clear form after submit
+            ServiceRequestValue.Text = "";
+            StatusComboBox.Items.Clear();
+            BlockageTypeComboBox.Items.Clear();
+            BlockageSubTypeComboBox.Items.Clear();
+            IsItACritSit.Checked = false;
+
+
         }
 
 
@@ -84,23 +94,24 @@ namespace CSSBlockageWinForms
             bool output = false;
             var servicerequest = ServiceRequestValue;
 
-            if (ServiceRequestValue.TextLength <= 0)
+            if (ServiceRequestValue.TextLength > 0)
             {
-                output = true;
+                if (ServiceRequestValue.TextLength == 15)
+                {
+                    output = true;
+                }
+                
             }
 
             
-            if (StatusComboBox.Text.Length > 0)
+            
+            if (BlockageSubTypeComboBox.Text.Length > 0)
             {
-
+                output = true;
             }
             if (BlockageSubTypeComboBox.Text.Length > 0)
             {
-
-            }
-            if (BlockageSubTypeComboBox.Text.Length > 0)
-            {
-
+                output = true;
             }
 
             return output;
@@ -108,7 +119,7 @@ namespace CSSBlockageWinForms
 
         private void IsItACritSit_CheckedChanged(object sender, EventArgs e)
         {
-
+            
         }
     }
 }

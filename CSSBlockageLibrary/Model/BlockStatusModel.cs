@@ -62,7 +62,7 @@ namespace CSSBlockageLibrary.Model
                 case "Collaboration with other Team":
                     BlockReason = "Collaboration with other Team";
                     break;
-                case "Waiting on Ava for Response":
+                case "Waiting on AVA for Response":
                     BlockReason = "Waiting on Ava for Response";
                     break;
                 default:
