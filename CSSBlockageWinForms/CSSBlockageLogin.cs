@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -15,6 +16,12 @@ namespace CSSBlockageWinForms
         public CSSBlockageLogin()
         {
             InitializeComponent();
+        }
+
+        private void LoginButton_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+            Application.Run(new CSSBlockageDataEntryForm());
         }
     }
 }

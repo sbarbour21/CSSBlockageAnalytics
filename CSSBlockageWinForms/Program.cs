@@ -16,7 +16,7 @@ namespace CSSBlockageWinForms
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            CSSBlockageLibrary.BlockEntryConfig.InitializeConnection(true);
+            CSSBlockageLibrary.BlockEntryConfig.InitializeConnection();
             //Initialize the DB connection
 
             Application.Run(new CSSBlockageDataEntryForm());

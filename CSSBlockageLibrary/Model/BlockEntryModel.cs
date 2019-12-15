@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CSSBlockageLibrary.Model
 {
@@ -12,26 +8,26 @@ namespace CSSBlockageLibrary.Model
         public int EngineerId { get; set; }
         public DateTime Time { get; set; }
         public string ServiceRequest { get; set; }
-        public SeverityModel Severity { get; set; } = new SeverityModel();
-        public BlockStatusModel Status { get; set; } = new BlockStatusModel();
+        public string Severity { get; set; }
+        public string Status { get; set; }
+        public string StatusReason { get; set; }
 
         public BlockEntryModel()
         {
-
         }
 
         public BlockEntryModel(string servicerequest, bool isItCrisit, string severityLetterSelection, string blockstatus, string blockReason)
         {
             DateTime timestamp = DateTime.UtcNow;
-            int entryId = Id; 
+            int entryId = Id;
             Time = timestamp;
             ServiceRequest = servicerequest;
-            Severity = new SeverityModel(isItCrisit, severityLetterSelection);
-            Status = new BlockStatusModel(blockstatus, blockReason);
+            Severity = severityLetterSelection;
+            Status = blockstatus;
+            StatusReason = blockReason;
+
 
             Console.WriteLine($"Blockage Entry {entryId} Completed");
-            
         }
-
     }
 }
