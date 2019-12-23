@@ -51,7 +51,7 @@ namespace CSSBlockageLibrary
         }
         public static string BlockStatusSwitch(string blockstatus)
         {
-            var blockOutput = "";
+            string blockOutput;
 
             switch (blockstatus)
             {
@@ -80,9 +80,5 @@ namespace CSSBlockageLibrary
 
             }
         }
-
-
-
-        //TODO -- Configure the Reason Method
     }   
 }

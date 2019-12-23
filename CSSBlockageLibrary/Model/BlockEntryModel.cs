@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Dynamic;
 
 namespace CSSBlockageLibrary.Model
 {
@@ -9,6 +10,7 @@ namespace CSSBlockageLibrary.Model
         public DateTime Time { get; set; }
         public string ServiceRequest { get; set; }
         public string Severity { get; set; }
+        public string CriSit { get; set; }
         public string Status { get; set; }
         public string StatusReason { get; set; }
 
@@ -23,11 +25,24 @@ namespace CSSBlockageLibrary.Model
             Time = timestamp;
             ServiceRequest = servicerequest;
             Severity = severityLetterSelection;
+            CriSit = BooleanString(isItCrisit);
             Status = blockstatus;
             StatusReason = blockReason;
 
+            
 
-            Console.WriteLine($"Blockage Entry {entryId} Completed");
+        }
+
+        private string BooleanString(bool isItCrisit)
+        {
+            if (isItCrisit)
+            {
+                return "true";
+            }
+            else
+            {
+                return "false";
+            }
         }
     }
 }
