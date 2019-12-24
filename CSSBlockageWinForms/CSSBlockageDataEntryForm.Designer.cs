@@ -176,9 +176,11 @@ namespace CSSBlockageWinForms
             this.CommentBox.Font = new System.Drawing.Font("Segoe UI", 10.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CommentBox.Location = new System.Drawing.Point(19, 430);
             this.CommentBox.Multiline = true;
+            this.CommentBox.MaxLength = 256;
             this.CommentBox.Name = "CommentBox";
             this.CommentBox.Size = new System.Drawing.Size(488, 164);
             this.CommentBox.TabIndex = 10;
+            this.CommentBox.TextChanged += new System.EventHandler(this.CommentBox_TextChanged);
             // 
             // listView1
             // 

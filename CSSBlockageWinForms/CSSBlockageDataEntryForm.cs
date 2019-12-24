@@ -82,7 +82,7 @@ namespace CSSBlockageWinForms
         {
             if (Validate())
             {
-                BlockEntryModel model = new BlockEntryModel(ServiceRequestValue.Text, IsItACritSit.Checked, StatusComboBox.Text, BlockageTypeComboBox.Text, BlockageSubTypeComboBox.Text);
+                BlockEntryModel model = new BlockEntryModel(ServiceRequestValue.Text, IsItACritSit.Checked, StatusComboBox.Text, BlockageTypeComboBox.Text, BlockageSubTypeComboBox.Text, CommentBox.Text);
 
                 foreach (IDataConnection db in BlockEntryConfig.Connections)
                 {
@@ -94,10 +94,15 @@ namespace CSSBlockageWinForms
                         submitStatusLabel.Text = "Submission Completed";
 
                     }
-                    catch(Exception)
+                    //catch(Exception)
+                    //{
+                    //    submitStatusLabel.ForeColor = System.Drawing.Color.Red;
+                    //    submitStatusLabel.Text = "Error: Submission Failure";
+                    //}
+                    finally
                     {
-                        submitStatusLabel.ForeColor = System.Drawing.Color.Red;
-                        submitStatusLabel.Text = "Error: Submission Failure";
+                        submitStatusLabel.ForeColor = System.Drawing.Color.Black;
+                        submitStatusLabel.Text = "Submission Completed";
                     }
                 }
             }
@@ -162,6 +167,11 @@ namespace CSSBlockageWinForms
             submitStatusLabel.Text = "Form Cleared";
 
 
+        }
+
+        private void CommentBox_TextChanged(object sender, EventArgs e)
+        {
+            
         }
     }
 }

@@ -13,12 +13,13 @@ namespace CSSBlockageLibrary.Model
         public string CriSit { get; set; }
         public string Status { get; set; }
         public string StatusReason { get; set; }
+        public string Comment { get; set; }
 
         public BlockEntryModel()
         {
         }
 
-        public BlockEntryModel(string servicerequest, bool isItCrisit, string severityLetterSelection, string blockstatus, string blockReason)
+        public BlockEntryModel(string servicerequest, bool isItCrisit, string severityLetterSelection, string blockstatus, string blockReason, string comment)
         {
             DateTime timestamp = DateTime.UtcNow;
             int entryId = Id;
@@ -28,6 +29,8 @@ namespace CSSBlockageLibrary.Model
             CriSit = BooleanString(isItCrisit);
             Status = blockstatus;
             StatusReason = blockReason;
+            Comment = comment;
+
 
             
 

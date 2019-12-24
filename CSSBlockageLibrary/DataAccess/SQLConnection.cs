@@ -27,6 +27,7 @@ namespace CSSBlockageLibrary.DataAccess
                 p.Add("@BlockReason", model.Status);
                 p.Add("@BlockStatus", model.StatusReason);
                 p.Add("@id", 0, dbType: DbType.Int32, direction: ParameterDirection.Output);
+                p.Add("@Comment", model.Comment);
 
                     connection.Execute("dbo.spEntry_BlockInsert", p, commandType: CommandType.StoredProcedure);
                 
