@@ -11,5 +11,7 @@ namespace CSSBlockageLibrary.DataAccess
     {
         BlockEntryModel SaveEntry(BlockEntryModel model);
 
+        //BlockEntryModel PullEntry(int entryId);
+
     }
 }

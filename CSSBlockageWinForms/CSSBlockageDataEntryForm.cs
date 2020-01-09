@@ -82,7 +82,8 @@ namespace CSSBlockageWinForms
         {
             if (Validate())
             {
-                BlockEntryModel model = new BlockEntryModel(ServiceRequestValue.Text, IsItACritSit.Checked, StatusComboBox.Text, BlockageTypeComboBox.Text, BlockageSubTypeComboBox.Text, CommentBox.Text);
+                BlockEntryModel model = new BlockEntryModel(ServiceRequestValue.Text, IsItACritSit.Checked, StatusComboBox.Text, 
+                    BlockageTypeComboBox.Text, BlockageSubTypeComboBox.Text, CommentBox.Text);
 
                 foreach (IDataConnection db in BlockEntryConfig.Connections)
                 {
@@ -94,11 +95,11 @@ namespace CSSBlockageWinForms
                         submitStatusLabel.Text = "Submission Completed";
 
                     }
-                    //catch(Exception)
-                    //{
-                    //    submitStatusLabel.ForeColor = System.Drawing.Color.Red;
-                    //    submitStatusLabel.Text = "Error: Submission Failure";
-                    //}
+                    catch (Exception)
+                    {
+                        submitStatusLabel.ForeColor = System.Drawing.Color.Red;
+                        submitStatusLabel.Text = "Error: Submission Failure";
+                    }
                     finally
                     {
                         submitStatusLabel.ForeColor = System.Drawing.Color.Black;
@@ -112,19 +113,20 @@ namespace CSSBlockageWinForms
                 submitStatusLabel.Text = "Error: Validation Failure";
             }
 
-            //Clear form after submit
             
 
-            //if (IsItACritSit.Checked == true)
-            //{
-            //    submitStatusLabel.ForeColor = System.Drawing.Color.Green;
-            //    submitStatusLabel.Text = "Submission Completed";
-            //}
-            //else
-            //{
-            //    submitStatusLabel.ForeColor = System.Drawing.Color.Red;
-            //    submitStatusLabel.Text = "Error";
-            //}
+
+
+            if (IsItACritSit.Checked == true)
+            {
+                submitStatusLabel.ForeColor = System.Drawing.Color.Green;
+                submitStatusLabel.Text = "Submission Completed";
+            }
+            else
+            {
+                submitStatusLabel.ForeColor = System.Drawing.Color.Red;
+                submitStatusLabel.Text = "Error";
+            }
 
             ServiceRequestValue.Text = "";
             StatusComboBox.SelectedIndex = -1;
@@ -144,8 +146,9 @@ namespace CSSBlockageWinForms
                 {
                     output = true;
                 }
-
             }
+
+
 
             return output;
         }
@@ -157,6 +160,11 @@ namespace CSSBlockageWinForms
 
         private void ResetButton_Click(object sender, EventArgs e)
         {
+            FormClear();
+        }
+
+        private void FormClear()
+        {
             ServiceRequestValue.Text = "";
             StatusComboBox.SelectedIndex = -1;
             BlockageSubTypeComboBox.Items.Clear();
@@ -165,13 +173,16 @@ namespace CSSBlockageWinForms
 
             submitStatusLabel.ForeColor = System.Drawing.Color.Black;
             submitStatusLabel.Text = "Form Cleared";
-
-
         }
 
         private void CommentBox_TextChanged(object sender, EventArgs e)
         {
             
+        }
+
+        private void OpenBlockBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

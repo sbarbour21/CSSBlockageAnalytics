@@ -20,7 +20,6 @@ namespace CSSBlockageWinForms
 
         private void LoginButton_Click(object sender, EventArgs e)
         {
-            Application.Exit();
             Application.Run(new CSSBlockageDataEntryForm());
         }
     }

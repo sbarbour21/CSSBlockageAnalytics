@@ -42,7 +42,7 @@ namespace CSSBlockageWinForms
             this.BlockageSubTypeComboBox = new System.Windows.Forms.ComboBox();
             this.CommentLabel = new System.Windows.Forms.Label();
             this.CommentBox = new System.Windows.Forms.TextBox();
-            this.listView1 = new System.Windows.Forms.ListView();
+            this.OpenBlockList = new System.Windows.Forms.ListView();
             this.PreviousBlockageList = new System.Windows.Forms.Label();
             this.ResetButton = new System.Windows.Forms.Button();
             this.SubmitButton = new System.Windows.Forms.Button();
@@ -175,25 +175,26 @@ namespace CSSBlockageWinForms
             // 
             this.CommentBox.Font = new System.Drawing.Font("Segoe UI", 10.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CommentBox.Location = new System.Drawing.Point(19, 430);
-            this.CommentBox.Multiline = true;
             this.CommentBox.MaxLength = 256;
+            this.CommentBox.Multiline = true;
             this.CommentBox.Name = "CommentBox";
             this.CommentBox.Size = new System.Drawing.Size(488, 164);
             this.CommentBox.TabIndex = 10;
             this.CommentBox.TextChanged += new System.EventHandler(this.CommentBox_TextChanged);
             // 
-            // listView1
+            // OpenBlockList
             // 
-            this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(24, 678);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(870, 382);
-            this.listView1.TabIndex = 11;
-            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.OpenBlockList.HideSelection = false;
+            this.OpenBlockList.Location = new System.Drawing.Point(24, 678);
+            this.OpenBlockList.Name = "OpenBlockList";
+            this.OpenBlockList.Size = new System.Drawing.Size(870, 382);
+            this.OpenBlockList.TabIndex = 11;
+            this.OpenBlockList.UseCompatibleStateImageBehavior = false;
+            this.OpenBlockList.SelectedIndexChanged += new System.EventHandler(this.OpenBlockBox_SelectedIndexChanged);
             // 
             // PreviousBlockageList
             // 
-            this.PreviousBlockageList.AutoSize = true;
+            this.PreviousBlockageList.AutoSize = true;  
             this.PreviousBlockageList.ForeColor = System.Drawing.Color.Black;
             this.PreviousBlockageList.Location = new System.Drawing.Point(12, 600);
             this.PreviousBlockageList.Name = "PreviousBlockageList";
@@ -230,7 +231,7 @@ namespace CSSBlockageWinForms
             this.IsItACritSit.AutoSize = true;
             this.IsItACritSit.Font = new System.Drawing.Font("Segoe UI", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.IsItACritSit.ForeColor = System.Drawing.Color.Black;
-            this.IsItACritSit.Location = new System.Drawing.Point(584, 424);
+            this.IsItACritSit.Location = new System.Drawing.Point(584, 479);
             this.IsItACritSit.Name = "IsItACritSit";
             this.IsItACritSit.Size = new System.Drawing.Size(272, 54);
             this.IsItACritSit.TabIndex = 15;
@@ -259,7 +260,7 @@ namespace CSSBlockageWinForms
             this.Controls.Add(this.SubmitButton);
             this.Controls.Add(this.ResetButton);
             this.Controls.Add(this.PreviousBlockageList);
-            this.Controls.Add(this.listView1);
+            this.Controls.Add(this.OpenBlockList);
             this.Controls.Add(this.CommentBox);
             this.Controls.Add(this.CommentLabel);
             this.Controls.Add(this.BlockageSubTypeComboBox);
@@ -296,7 +297,7 @@ namespace CSSBlockageWinForms
         private System.Windows.Forms.ComboBox BlockageSubTypeComboBox;
         private System.Windows.Forms.Label CommentLabel;
         private System.Windows.Forms.TextBox CommentBox;
-        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ListView OpenBlockList;
         private System.Windows.Forms.Label PreviousBlockageList;
         private System.Windows.Forms.Button ResetButton;
         private System.Windows.Forms.Button SubmitButton;

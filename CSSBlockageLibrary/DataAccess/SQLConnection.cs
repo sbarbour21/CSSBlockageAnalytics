@@ -13,9 +13,21 @@ namespace CSSBlockageLibrary.DataAccess
 {
     public class SQLConnection : IDataConnection
     {
+        //public BlockEntryModel PullEntry(int entryId)
+        //{
+        //    using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(BlockEntryConfig.CnnString("EntryDB1")))
+        //    {
+        //        var p = new DynamicParameters();
+
+        //        BlockEntryModel model;
+
+        //        return model;
+        //    }
+        //}
+
         public BlockEntryModel SaveEntry(BlockEntryModel model)
         {
-            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(BlockEntryConfig.CnnString("EntryDB1")))
+            using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(BlockEntryConfig.CnnString("CSSBlockageDb")))
             {
                 //Sends to the database
                 var p = new DynamicParameters();
@@ -29,12 +41,14 @@ namespace CSSBlockageLibrary.DataAccess
                 p.Add("@id", 0, dbType: DbType.Int32, direction: ParameterDirection.Output);
                 p.Add("@Comment", model.Comment);
 
-                    connection.Execute("dbo.spEntry_BlockInsert", p, commandType: CommandType.StoredProcedure);
+                connection.Execute("dbo.spEntry_BlockInsert", p, commandType: CommandType.StoredProcedure);
                 
                 model.Id = p.Get<int>("@id");
 
                 return model;
             }
+
+            
         }
     }
 }
